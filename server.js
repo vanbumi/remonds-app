@@ -5,6 +5,9 @@ const connectDB = require('./config/db');
 // call connectDB
 connectDB();
 
+// Initial Middleware
+app.use(express.json({ extended: false }));
+
 // Test route index
 app.get('/', (req, res) => res.json('API is works!'));
 
