@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://dyo123:dyo123@medcad-oypzh.mongodb.net/test?retryWrites=true"
+  "mongoURI": "mongodb+srv://dyo123:dyo123@medcad-oypzh.mongodb.net/test?retryWrites=true",
+  "jwtSecret": "mysecrettoken"
 }
