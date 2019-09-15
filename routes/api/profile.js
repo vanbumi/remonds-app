@@ -168,7 +168,7 @@ router.delete('/', auth, async (req, res) => {
   }
 });
 
-// @route		Pfgyt-[4.////////////////////////////////////////ju  nhyn                   p8ponUT api/profile/experience
+// @route   PUT api/profile/experience
 // @desc		Add profile user experience
 // @access	Private
 
@@ -228,6 +228,31 @@ router.put(
     }
   }
 );
+
+// @route   DELETE api/profile/experience/:exp_id
+// @desc		DELETE experience
+// @access	Private
+
+router.delete('/experience/:exp_id', auth, async (req, res) => {
+  try {
+    const profile = await Profile.findOne({ user: req.user.id });
+
+    // Get removeIndex
+    const removeIndex = profile.experience
+      .map(item => item.id)
+      .indexOf(req.params.exp_id);
+
+    profile.experience.splice(removeIndex, 1);
+
+    await profile.save();
+
+    res.json(profile);
+
+  } catch (err) {
+    console.err(err.message);
+    res.status(500).send('Server Error');
+  }
+});
 
 // export route
 module.exports = router;
