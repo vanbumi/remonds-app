@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://dyo123:dyo123@medcad-oypzh.mongodb.net/test?retryWrites=true",
-  "jwtSecret": "mysecrettoken"
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "abc887aa55ce68489042",
+  "githubSecret": "37eb0688dc1df461142eedd61d8e976cd4ae2491"
 }
