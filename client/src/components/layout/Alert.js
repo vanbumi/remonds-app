@@ -11,8 +11,6 @@ const Alert = ({ alerts }) =>
         </div>
     ))    
         
-
-
 Alert.propTypes = {
     alerts: PropTypes.array.isRequired
 }

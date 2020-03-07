@@ -12,7 +12,7 @@ const connectDB = async () => {
         useFindAndModify: false
       });
 
-    console.log('MongoDB Connected...')
+    console.log('MongoDB Connected to mongodb ATLAS...!')
   } catch (err) {
     console.error(err.message);
 
