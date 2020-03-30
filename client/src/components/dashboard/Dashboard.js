@@ -32,7 +32,7 @@ const Dashboard = ({
                     Create Profile
                 </Link>
             </Fragment>
-        ) };
+        ) }
     </Fragment>
 }
 
