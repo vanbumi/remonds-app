@@ -6,6 +6,7 @@ import Spinner from '../layout/Spinner';
 import { Link } from 'react-router-dom';
 import DashboardAction from './DashboardAction';
 import Experience from './Experience';
+import Education from './Education';
 
 
 const Dashboard = ({ 
@@ -26,7 +27,8 @@ const Dashboard = ({
         { profile !== null ? (
             <Fragment>
                 <DashboardAction />
-                <Experience />
+                <Experience experience={profile.experience} />
+                <Education education={profile.education} />
             </Fragment>
         ) : (
             <Fragment>
