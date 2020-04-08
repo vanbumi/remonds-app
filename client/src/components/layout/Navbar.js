@@ -9,13 +9,19 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   // membuat link auth dan guest non auth
   const authLink = (
     <ul>
-      <li><a href="#!">Members</a></li>
+      <li>
+        <Link to='/profiles'>
+          Members
+        </Link>
+      </li>
+
       <li>
         <Link to="/dashboard">
           <i className='fas fa-user' />{' '}
           <span className='hide-sm'>Dashboard</span>
         </Link>
       </li>
+
       <li>
         <a onClick={logout} href='#!'>
           <i className='fas fa-sign-out-alt' />{' '}
@@ -27,6 +33,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   const guestLink = (
     <ul>
+      <li>
+        <Link to='/profiles'>
+          Members
+        </Link>
+      </li>
       <li><Link to="register">Register</Link></li>
       <li><Link to="login">Login</Link></li>
     </ul>
