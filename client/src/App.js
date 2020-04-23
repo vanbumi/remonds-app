@@ -20,6 +20,7 @@ import Profile from './components/profile/Profile';
 import AddExperience from './components/profile-forms/AddExperience';
 import AddEducation from './components/profile-forms/AddEducation';
 import Posts from './components/posts/Posts';
+import Post from './components/post/Post';
 
 // Cek apakah toke tersedia?
 if(localStorage.token) {
@@ -65,7 +66,11 @@ const App = () => {
               <PrivateRoute 
                 exact 
                 path="/posts" 
-                component={Posts} />        
+                component={Posts} />
+              <PrivateRoute 
+                exact 
+                path="/posts/:id" 
+                component={Post} />          
             </Switch>
           </section>
         </Fragment>
